@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bq-airflow-dag-generator"
-version = "0.1.0"
+version = "0.1.1"
 description = "Generate Airflow DAG from DOT language to execute BigQuery efficiently mainly for AlphaSQL"
 authors = ["Matts966 <Matts966@users.noreply.github.com >"]
 license = "Apache 2.0"
