@@ -17,13 +17,12 @@ import os
 
 
 def get_bigquery_callable(query):
-    def context():
+    def callable():
         client = bigquery.Client()
         query_job = client.query(query)
         print(query_job.result())
 
-    return context
-
+    return callable
 
 def default_get_airflow_task_by_sql_path_and_dag(sql_file_path, dag):
     sql_root = os.environ.get("SQL_ROOT")
@@ -99,7 +98,6 @@ For more information, see Task Instance Details.
             dependent >> task
     return dag
 
-
-def generate_dag_by_dot_path(dot_path: str, dag=None, get_task_by_sql_path_and_dag=default_get_airflow_task_by_sql_path_and_dag):
+def generate_airflow_dag_by_dot_path(dot_path: str, dag=None, get_task_by_sql_path_and_dag=default_get_airflow_task_by_sql_path_and_dag):
     g = read_dot(dot_path)
     return generate_airflow_dag_by_digraph(g, dag)

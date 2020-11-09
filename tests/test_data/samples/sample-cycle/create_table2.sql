@@ -1,0 +1,5 @@
+CREATE TABLE table2 AS
+SELECT
+  *
+FROM
+  table1;
