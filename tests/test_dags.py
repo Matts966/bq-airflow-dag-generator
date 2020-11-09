@@ -5,8 +5,8 @@ import unittest
 
 class TestDAGs(unittest.TestCase):
     def test_dags(self):
-        os.environ["SQL_ROOT"] = "/Users/matts966/alphasql/"
         dagpath = os.path.join(os.path.dirname(__file__), "test_data")
+        os.environ["SQL_ROOT"] = dagpath
         for curDir, _, files in os.walk(dagpath):
             for file in files:
                 if not file.endswith(".dot"):
