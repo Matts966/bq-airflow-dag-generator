@@ -47,7 +47,7 @@ Query:
     return task
 
 dagpath = "/path/to/dag.dot"
-generate_airflow_dag_by_dot_path(dagpath, get_task_by_sql_path_and_dag=gen_task)
+dag = generate_airflow_dag_by_dot_path(dagpath, get_task_by_sql_path_and_dag=gen_task)
 ```
 
 ## Test
