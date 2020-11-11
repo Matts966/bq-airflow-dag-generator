@@ -31,7 +31,7 @@ def default_get_airflow_task_by_sql_path_and_dag(sql_file_path, dag):
     with open(sql_file_path, "r") as f:
         query = f.read()
         task = PythonOperator(
-            task_id=sql_file_path.replace("/", ""),
+            task_id=sql_file_path.replace("/", "__").strip(".sql"),
             python_callable=get_bigquery_callable(query),
             dag=dag,
         )
