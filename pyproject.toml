@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "bq-airflow-dag-generator"
-version = "0.1.5"
+version = "0.2.0"
 description = "Generate Airflow DAG from DOT language to execute BigQuery efficiently mainly for AlphaSQL"
 authors = ["Matts966 <Matts966@users.noreply.github.com>"]
 license = "Apache 2.0"
@@ -10,7 +10,7 @@ readme = "README.md"
 python = "^3.6"
 networkx = "^2.5"
 google-cloud-bigquery = "^2.3.1"
-apache-airflow = "^1.10.9"
+apache-airflow = "^2.0"
 pydot = "^1.4.1"
 
 [tool.poetry.dev-dependencies]
